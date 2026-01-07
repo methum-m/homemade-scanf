@@ -2,7 +2,10 @@
 
 int main(int argc, char *argv[]) {
 
-  char num1[] = "5";
+  char *current_char = argv[1];
 
-  return num1[0];
+  if (current_char[0] == ' ') {
+
+    printf("current_char: %s\n", current_char);
+  }
 }

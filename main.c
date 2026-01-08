@@ -2,10 +2,10 @@
 
 int main(int argc, char *argv[]) {
 
-  char *current_char = argv[1];
+  int input = getchar();
 
-  if (current_char[0] == ' ') {
-
-    printf("current_char: %s\n", current_char);
+  if (input <= 57 && input >= 48) {
+    printf("%d\n", input);
+    printf("%s\n", "This is a number value");
   }
 }

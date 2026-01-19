@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[]) {
+int main() {
+  int num = 0; // stores the final number
+  int ch;
 
-  int input = getchar();
-
-  while (input >= '0' && input <= '9') {
-
-    printf("%s\n", "This is a number");
-    return input;
+  // Read characters until newline or EOF
+  while ((ch = getchar()) != EOF && ch != '\n') {
+    if (ch >= '0' && ch <= '9') {
+      num = num * 10 + (ch - '0'); // convert char to number and accumulate
+    } else {
+      break; // stop if a non-digit character is found
+    }
   }
 
-  printf("%s\n", "This is not a number");
+  printf("Number entered: %d\n", num);
+  return 0;
 }

@@ -2,10 +2,15 @@
 
 int main(int argc, char *argv[]) {
 
-  int num;
+  int num = 0;
   int ch;
 
   while ((ch = getchar()) != EOF && ch != '\n') {
+
+    if (ch == ' ' || ch == '\t') {
+
+      continue;
+    }
 
     if (ch >= '0' && ch <= '9') {
 
@@ -17,4 +22,6 @@ int main(int argc, char *argv[]) {
       break;
     }
   }
+
+  printf("%d\n", num);
 }
